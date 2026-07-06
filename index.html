@@ -2,6 +2,9 @@
 <html lang="es-AR">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' https: data: blob:; media-src 'self' blob: data:; connect-src 'self' https://api.anthropic.com https://generativelanguage.googleapis.com https://elmundodelmueble.com https://cdn.shopify.com https://dcdn-us.mitiendanube.com https://images.unsplash.com https://images.pexels.com https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; worker-src 'self' blob: https://cdnjs.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<script>(function(){if(self!==top){try{top.location.replace(self.location.href)}catch(e){document.documentElement.style.display="none"}}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>El Mundo del Mueble · Plataforma del hogar argentino</title>
 <meta name="description" content="Plataforma del hogar argentino: muebles de fábrica directa, Club EMM de beneficios (MÁS y BLACK), cashback, 6 cuotas sin interés y envíos a todo el país.">
@@ -16,10 +19,10 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%238B1F5C'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' font-weight='700' fill='%23FAF6F0' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <!-- Librerías para procesamiento real de catálogos (Seller Center) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.6.82/pdf.min.mjs" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.6.82/pdf.min.mjs" type="module" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>window.pdfjsWorkerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.6.82/pdf.worker.min.mjs";</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <style>
 :root{
   --mg:#8B1F5C;--mgd:#6B1547;--mgl:#C42A7A;--mgx:#FAE0EE;
@@ -3949,7 +3952,7 @@ body{background:#FAF5EE}
     <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;margin-bottom:6px">⚙ Configurar Mara IA</h3>
     <p style="font-size:12.5px;color:rgba(255,255,255,.75);line-height:1.55;margin-bottom:18px">Para que Mara responda con IA real, pegá tu API key de Anthropic. Se guarda solo en este navegador.</p>
     <label style="display:block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px">Anthropic API Key</label>
-    <input id="apiKeyInput" type="password" placeholder="sk-ant-api03-…" style="width:100%;padding:11px 13px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:13px;font-family:monospace;margin-bottom:12px;box-sizing:border-box">
+    <input id="apiKeyInput" type="password" autocomplete="off" placeholder="sk-ant-api03-…" style="width:100%;padding:11px 13px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:13px;font-family:monospace;margin-bottom:12px;box-sizing:border-box">
     <div style="display:flex;gap:8px;margin-bottom:18px">
       <button onclick="saveApiKey()" style="flex:1;background:var(--mg);color:#fff;border:none;border-radius:10px;padding:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:Outfit,sans-serif">💾 Guardar y conectar</button>
       <button onclick="clearApiKey()" style="background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:10px;padding:12px 14px;font-size:12px;font-weight:600;cursor:pointer;font-family:Outfit,sans-serif">Borrar</button>
@@ -3961,7 +3964,7 @@ body{background:#FAF5EE}
       <h3 style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;margin-bottom:5px;color:#FFD700">🍌 Nano Banana · Ambientación visual</h3>
       <p style="font-size:12px;color:rgba(255,255,255,.75);line-height:1.55;margin-bottom:14px">Google <strong style="color:#FFD700">Gemini 2.5 Flash Image</strong> (Nano Banana) toma fotos de producto sobre fondo blanco y las re-renderiza dentro de ambientes diseñados. Una imagen de catálogo de fábrica → foto profesional ambientada en segundos.</p>
       <label style="display:block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:6px">Google AI API Key</label>
-      <input id="geminiKeyInput" type="password" placeholder="AIza…" style="width:100%;padding:11px 13px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:13px;font-family:monospace;margin-bottom:12px;box-sizing:border-box">
+      <input id="geminiKeyInput" type="password" autocomplete="off" placeholder="AIza…" style="width:100%;padding:11px 13px;border-radius:10px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:13px;font-family:monospace;margin-bottom:12px;box-sizing:border-box">
       <div style="display:flex;gap:8px;margin-bottom:14px">
         <button onclick="saveGeminiKeyUI()" style="flex:1;background:linear-gradient(135deg,#FFD700,#E8A020);color:#1A1612;border:none;border-radius:10px;padding:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:Outfit,sans-serif">💾 Guardar Nano Banana</button>
         <button onclick="clearGeminiKeyUI()" style="background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:10px;padding:12px 14px;font-size:12px;font-weight:600;cursor:pointer;font-family:Outfit,sans-serif">Borrar</button>
@@ -6925,7 +6928,7 @@ function suRenderFabrica(tab){
     body.innerHTML=`
       <form class="su-form" onsubmit="suFabricaLogin(event)">
         <div class="su-form-field"><label>Email de la fábrica</label><input type="email" id="fbLoginEmail" placeholder="ventas@tufabrica.com" required></div>
-        <div class="su-form-field"><label>Contraseña</label><input type="password" id="fbLoginPass" placeholder="••••••••" required>
+        <div class="su-form-field"><label>Contraseña</label><input type="password" id="fbLoginPass" placeholder="••••••••" autocomplete="current-password" required>
           <div class="help"><a onclick="toast('Te enviamos un mail para recuperar tu clave ✓')" style="color:var(--mg);cursor:pointer">¿Olvidaste tu contraseña?</a></div></div>
         <button type="submit" class="su-form-btn">Entrar al Portal Fábrica</button>
         <div class="su-form-alt">¿Todavía no sos vendedor? <a onclick="suSetTab('signup')">Sumá tu fábrica o proveedor</a></div>
@@ -6946,7 +6949,7 @@ function suRenderFabrica(tab){
         <div class="su-form-field"><label>CUIT</label><input type="text" id="fbCuit" placeholder="XX-XXXXXXXX-X" required></div>
         <div class="su-form-field"><label>Email</label><input type="email" id="fbEmail" placeholder="ventas@tufabrica.com" required></div>
         <div class="su-form-field"><label>Teléfono / WhatsApp</label><input type="tel" id="fbTel" placeholder="11 1234-5678" required></div>
-        <div class="su-form-field"><label>Contraseña</label><input type="password" id="fbPass" placeholder="Mínimo 6 caracteres" minlength="6" required></div>
+        <div class="su-form-field"><label>Contraseña</label><input type="password" id="fbPass" placeholder="Mínimo 6 caracteres" minlength="6" autocomplete="new-password" required></div>
         <button type="submit" class="su-form-btn">Crear cuenta y continuar →</button>
         <div class="su-form-alt">¿Ya tenés cuenta de fábrica? <a onclick="suSetTab('login')">Ingresá acá</a></div>
         <div style="font-size:11.5px;color:var(--mid);line-height:1.45;margin-top:12px;text-align:center">Siguiente paso: cargar tu constancia de AFIP y tu catálogo en el Portal Fábrica.</div>
@@ -6974,7 +6977,7 @@ function suRenderForm(tab){
         </div>
         <div class="su-form-field">
           <label>Contraseña</label>
-          <input type="password" id="suLoginPass" placeholder="••••••••" required>
+          <input type="password" id="suLoginPass" placeholder="••••••••" autocomplete="current-password" required>
           <div class="help"><a onclick="toast('Te enviamos un mail para recuperar tu clave ✓')" style="color:var(--mg);cursor:pointer">¿Olvidaste tu contraseña?</a></div>
         </div>
         <button type="submit" class="su-form-btn">Iniciar sesión</button>
@@ -7016,7 +7019,7 @@ function suRenderForm(tab){
         </div>
         <div class="su-form-field">
           <label>Contraseña</label>
-          <input type="password" id="suSignPass" placeholder="Mínimo 6 caracteres" minlength="6" required>
+          <input type="password" id="suSignPass" placeholder="Mínimo 6 caracteres" minlength="6" autocomplete="new-password" required>
         </div>
         <div style="font-size:11.5px;color:var(--mid);line-height:1.45;margin:8px 0 4px">
           Al crear tu cuenta aceptás los <a style="color:var(--mg);cursor:pointer" onclick="openInfo('terminos')">Términos y condiciones</a> y la <a style="color:var(--mg);cursor:pointer" onclick="openInfo('privacidad')">Política de privacidad</a> de EMM.
